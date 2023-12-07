@@ -41,7 +41,7 @@ DesktopWindow::DesktopWindow(LogWriter *logWriter, ConnectionConfig *conConf)
   m_previousMouseState(0),
   m_isBackgroundDirty(false)
 {
-  m_rfbKeySym = std::auto_ptr<RfbKeySym>(new RfbKeySym(this, m_logWriter));
+  m_rfbKeySym = std::shared_ptr<RfbKeySym>(new RfbKeySym(this, m_logWriter));
 }
 
 DesktopWindow::~DesktopWindow()
